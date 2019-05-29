@@ -1,0 +1,129 @@
+.offer
+  background: url('../img/offer/offer-bg.jpg') center right no-repeat
+  background-size: contain
+  position: relative
+  padding: 76px 0 73px
+  &:before
+    content: ''
+    width: 50%
+    height: 100%
+    position: absolute
+    background-color: #ffffff
+    top: 0
+    left: 0
+  &-block
+    width: 50%
+    padding-right: 90px
+    position: relative
+    &__text
+      display: flex
+      justify-content: space-between
+      &_left
+        max-width: 225px
+        font-size: 15px
+        line-height: 24px
+      &_right 
+        margin-right: -2px
+        max-width: 200px  
+        font-size: 15px
+        line-height: 24px
+        strong
+          letter-spacing: 0.2px
+  &__title
+    margin-top: -2px
+    margin-left: 3px
+    margin-bottom: 20px
+    max-width: 360px
+    line-height: 35px
+  &__subtitle
+    display: block
+    max-width: 250px
+    margin-left: 2px
+    margin-bottom: 32px
+  &__form
+    margin-left: 2px
+    margin-right: -2px
+    margin-bottom: 11px
+  &__input
+    margin-bottom: 30px
+    width: 240px
+    &:first-child
+      margin-right: 10px
+    &:nth-child(2)
+      padding-left: 33px
+  &__button
+    width: 100%
+    min-height: 70px
+    +bold
+
+@media (max-width: 1200px)
+  .offer
+    background-size: cover
+    &__input
+      width: 100%
+      margin-bottom: 10px
+    &__button
+      font-size: 13px
+    &-block
+      text-align: center
+      &__text
+        flex-direction: column
+        align-items: center
+        &_left, &_right
+          margin-top: 15px
+          margin-bottom: 0
+    &__title
+      margin-left: auto
+      margin-right: auto
+    &__subtitle
+      margin-left: auto
+      margin-right: auto
+
+@media (max-width: 992px)
+  .offer
+    &-block
+      padding-right: 40px
+
+@media (max-width: 768px)
+  .offer
+    background: #ffffff
+    &-block
+      width: 100%
+      padding-right: 0
+    &__button
+      font-size: 14px
+
+@media (max-width: 576px)
+  .offer
+    padding: 51px 0
+    &-block
+      text-align: left
+      &__text
+        align-items: flex-start
+        margin-left: 11px
+        &_left, &_right
+          margin-top: 7px
+    &__title
+      font-size: 18px
+      line-height: 1.2
+      margin-left: 4px
+      margin-bottom: 19px
+    &__subtitle
+      font-size: 14px
+      line-height: 1.2
+      margin-left: 5px
+      margin-bottom: 29px
+    &__form
+      margin-left: 5px
+      margin-right: -5px
+      margin-bottom: 13px
+    &__input
+      &:first-child
+        margin-right: 0
+        padding-left: 22px
+      &:nth-child(2)
+        padding-left: 22px
+    &__button
+      padding: 18px 59px 18px 63px
+      line-height: 1.3
+    

@@ -7,6 +7,10 @@ body
 img
   max-width: 100%
 
+button, input, a, textarea, select 
+  &:focus 
+    outline: none
+
 .container
   width: 1170px
   margin: auto
@@ -25,11 +29,32 @@ img
 
 @media (max-width: 576px)
   .container
-    max-width: 540px
-    width: 86%
+    max-width: 275px
+    // width: 86%
 
 .button
   border-radius: 10px
   background-color: $main-color
   border: none
   padding: 18px 30px
+  &:hover 
+    background-color: darken($main-color, 5%)
+    cursor: pointer
+
+.section
+  padding: 90px 0
+  &-title
+    font-size: 24px
+    +bold
+  &-subtitle
+    font-size: 16px
+
+.input
+  border: 1px solid $border-input
+  border-radius: 10px
+  padding: 22px 26px
+  font-size: 15px
+  &:focus
+    border: 1px solid orange
+    border-radius: 10px
+
