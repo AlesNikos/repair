@@ -69,6 +69,8 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   background-color: #ffd200;
   border: none;
   padding: 18px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .button:hover {
