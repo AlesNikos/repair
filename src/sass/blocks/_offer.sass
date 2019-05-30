@@ -90,6 +90,15 @@
     &-block
       width: 100%
       padding-right: 0
+      &__text 
+        flex-direction: row
+        text-align: left
+    &__title 
+      max-width: 540px
+    &__subtitle
+      max-width: 540px
+    &__input
+      width: 260px
     &__button
       font-size: 14px
 
@@ -99,6 +108,7 @@
     &-block
       text-align: left
       &__text
+        flex-direction: column
         align-items: flex-start
         margin-left: 11px
         &_left, &_right
@@ -118,6 +128,7 @@
       margin-right: -5px
       margin-bottom: 13px
     &__input
+      width: 100%
       &:first-child
         margin-right: 0
         padding-left: 22px
