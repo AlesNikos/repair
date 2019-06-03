@@ -642,6 +642,7 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
 
 @media (max-width: 576px) {
   .portfolio {
+    background: #f5f5f5;
     padding: 40px 0 59px;
   }
   .portfolio__title {
