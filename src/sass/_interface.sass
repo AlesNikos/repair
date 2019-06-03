@@ -26,6 +26,8 @@ button, input, a, textarea, select
 @media (max-width: 768px)
   .container
     width: 540px
+  .scroll-up
+    display: none
 
 @media (max-width: 576px)
   .container
@@ -47,6 +49,7 @@ button, input, a, textarea, select
   &-title
     font-size: 24px
     +bold
+    text-align: center
   &-subtitle
     font-size: 16px
 
@@ -70,3 +73,8 @@ button, input, a, textarea, select
   display: none
   text-indent: -9999px
   background: url('../img/up-arrow.png') center no-repeat
+
+.arrows 
+  &__left, &__right
+    &:hover
+      cursor: pointer

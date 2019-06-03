@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   /* Прокрутка страницы вверх при помощи кнопки */
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 100 && $(this).width() > 768) {
       $('.scroll_up').fadeIn();
     } else {
       $('.scroll_up').fadeOut();
@@ -24,5 +24,30 @@ $(document).ready(function() {
     }, 600);
     return false;
   });
+
+  /* Инициализация Slick слайдера */
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.arrows__left'),
+    nextArrow: $('.arrows__right'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
 
 });
