@@ -636,6 +636,12 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
           justify-content: space-between;
 }
 
+.slider__item {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .slider__image {
   margin: auto;
 }
