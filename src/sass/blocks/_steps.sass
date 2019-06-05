@@ -1,0 +1,101 @@
+.step
+  flex-basis: 20%
+  text-align: center
+  position: relative
+  &:after
+    content: ''
+    width: 72px
+    height: 25px
+    position: absolute
+    top: -11px
+    right: -15%
+    background: url('../img/steps/arrow.png') no-repeat center
+  &:last-child
+    &:after
+      display: none
+  &__image
+    width: 100px
+    height: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    margin-bottom: 26px
+    border: 3px solid $main-color
+    border-radius: 50%
+  &__text
+    max-width: 160px  
+    margin: auto
+    font-size: 14px
+    line-height: 20px
+  &s
+    padding-top: 31px
+    padding-bottom: 95px
+    &__title
+      max-width: 660px
+      margin-top: 0
+      margin-left: 257px
+      margin-bottom: 38px
+      font-size: 30px
+      line-height: 45px
+    &__subtitle
+      display: block
+      margin-bottom: 58px
+      margin-left: 5px
+      letter-spacing: -0.1px
+      text-align: center
+      font-size: 20px
+      line-height: 45px
+    &-block
+      display: flex
+      flex-wrap: wrap
+      margin-right: -3px
+      margin-left: 3px
+
+@media (max-width: 1200px)
+  .step
+    &:after
+      right: -19%
+    &s
+      &__title
+        margin-left: auto
+        margin-right: auto
+
+@media (max-width: 992px)
+  .step 
+     flex-basis: 50%
+     margin-bottom: 30px
+     &:after
+       display: none
+     &s
+       &-block
+         justify-content: center
+
+@media (max-width: 576px)
+  .step
+    margin-bottom: 28px
+    &:first-child
+      margin-bottom: 29px
+      .step__image
+        margin-bottom: 20px
+    &__image
+      margin-bottom: 28px
+    &__text
+      font-size: 12px
+      line-height: 16px
+    &s
+      padding-top: 23px
+      padding-bottom: 46px
+      &__title
+        margin-right: 2px
+        margin-bottom: 10px
+        font-size: 18px
+        line-height: 1.2
+      &__subtitle
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 19px
+        font-size: 14px
+      &-block
+        flex-direction: column
+        margin-left: -3px

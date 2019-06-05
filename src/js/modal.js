@@ -80,15 +80,15 @@ $(document).ready(function() {
 
 
   /* Скрипт для появления анимации при прокрутки страницы */
-  let target = $('.offer__button');
-  let targetPos = target.offset().top;
-  let winHeight = $(window).height();
-  let scrollToElem = targetPos - winHeight;
-  $(window).scroll(function () {
-    let winScrollTop = $(this).scrollTop();
-    if (winScrollTop > scrollToElem) {
-      target.addClass('fadeInUp');
-    }
-  });
+  // let target = $('.offer__button');
+  // let targetPos = target.offset().top;
+  // let winHeight = $(window).height();
+  // let scrollToElem = targetPos - winHeight;
+  // $(window).scroll(function () {
+  //   let winScrollTop = $(this).scrollTop();
+  //   if (winScrollTop > scrollToElem) {
+  //     target.addClass('fadeInUp');
+  //   }
+  // });
 
 });

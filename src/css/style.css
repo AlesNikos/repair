@@ -125,64 +125,6 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
 }
 
 /* Настройка анимации */
-@-webkit-keyframes rollIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-@keyframes rollIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 /* Настройка шапки */
 .navbar {
   padding: 8px 0;
@@ -346,12 +288,6 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   height: 40px;
   border: 2px solid #ffd200;
   border-radius: 50%;
-  -webkit-animation-name: rollIn;
-          animation-name: rollIn;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
 }
 
 .hero-list__text {
@@ -888,6 +824,155 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   }
   .card__text {
     padding: 15px 25px 32px 25px;
+  }
+}
+
+/* Стили для блока 5 шагов до ремонта */
+.step {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  text-align: center;
+  position: relative;
+}
+
+.step:after {
+  content: '';
+  width: 72px;
+  height: 25px;
+  position: absolute;
+  top: -11px;
+  right: -15%;
+  background: url("../img/steps/arrow.png") no-repeat center;
+}
+
+.step:last-child:after {
+  display: none;
+}
+
+.step__image {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-bottom: 26px;
+  border: 3px solid #ffd200;
+  border-radius: 50%;
+}
+
+.step__text {
+  max-width: 160px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.steps {
+  padding-top: 31px;
+  padding-bottom: 95px;
+}
+
+.steps__title {
+  max-width: 660px;
+  margin-top: 0;
+  margin-left: 257px;
+  margin-bottom: 38px;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.steps__subtitle {
+  display: block;
+  margin-bottom: 58px;
+  margin-left: 5px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -3px;
+  margin-left: 3px;
+}
+
+@media (max-width: 1200px) {
+  .step:after {
+    right: -19%;
+  }
+  .steps__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .step {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+  .step:after {
+    display: none;
+  }
+  .steps-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .step {
+    margin-bottom: 28px;
+  }
+  .step:first-child {
+    margin-bottom: 29px;
+  }
+  .step:first-child .step__image {
+    margin-bottom: 20px;
+  }
+  .step__image {
+    margin-bottom: 28px;
+  }
+  .step__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .steps {
+    padding-top: 23px;
+    padding-bottom: 46px;
+  }
+  .steps__title {
+    margin-right: 2px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .steps__subtitle {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 19px;
+    font-size: 14px;
+  }
+  .steps-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: -3px;
   }
 }
 
