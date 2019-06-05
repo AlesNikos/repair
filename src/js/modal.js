@@ -91,4 +91,46 @@ $(document).ready(function() {
   //   }
   // });
 
+  /* Валидация форм */
+  $('#offer-form').validate({
+    rules: {
+      offer_username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      offer_phone: "required"
+    }, 
+    messages: {
+      offer_username: "Заполните поле",
+      offer_phone: "Заполните поле"
+    }  
+  });
+
+  $('#brif-form').validate({
+    rules: {
+      brif_username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      brif_phone: "required",
+      brif_email: {
+        required: true,
+        email: true
+      }
+    }, 
+    messages: {
+      brif_username: "Заполните поле",
+      brif_phone: "Заполните поле",
+      brif_email: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+  });
+
+  /* Маска для телефона */
+  $('.phone').mask('+7 (999) 999-99-99');
+
 });
