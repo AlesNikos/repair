@@ -124,6 +124,16 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   cursor: pointer;
 }
 
+input.invalid {
+  border: 1px solid red;
+}
+
+div.invalid {
+  position: absolute;
+  font-size: 10px;
+  color: red;
+}
+
 /* Настройка анимации */
 /* Настройка шапки */
 .navbar {
@@ -486,6 +496,20 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   width: 100%;
   min-height: 70px;
   font-family: 'Museo Sans 700 Bold', sans-serif;
+}
+
+#offer-form {
+  position: relative;
+}
+
+#offer_username-error {
+  top: -11px;
+  left: 8px;
+}
+
+#offer_phone-error {
+  top: -11px;
+  right: 157px;
 }
 
 @media (max-width: 1200px) {
@@ -1110,6 +1134,25 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   display: block;
   font-size: 15px;
   line-height: 24px;
+}
+
+#brif-form {
+  position: relative;
+}
+
+#brif_username-error {
+  top: -12px;
+  left: 8px;
+}
+
+#brif_phone-error {
+  top: 69px;
+  left: 8px;
+}
+
+#brif_email-error {
+  top: 149px;
+  left: 8px;
 }
 
 @media (max-width: 1200px) {

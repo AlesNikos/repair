@@ -104,7 +104,9 @@ $(document).ready(function() {
     messages: {
       offer_username: "Заполните поле",
       offer_phone: "Заполните поле"
-    }  
+    },
+    errorClass: "invalid",
+    errorElement: "div"  
   });
 
   $('#brif-form').validate({
@@ -127,7 +129,9 @@ $(document).ready(function() {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
-    }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
   });
 
   /* Маска для телефона */
