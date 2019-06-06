@@ -102,7 +102,11 @@ $(document).ready(function() {
       offer_phone: "required"
     }, 
     messages: {
-      offer_username: "Заполните поле",
+      offer_username: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не менее {0} символов!"),
+        maxlength: jQuery.validator.format("Не более {0} символов!")
+      },
       offer_phone: "Заполните поле"
     },
     errorClass: "invalid",
@@ -123,7 +127,11 @@ $(document).ready(function() {
       }
     }, 
     messages: {
-      brif_username: "Заполните поле",
+      brif_username: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не менее {0} символов!"),
+        maxlength: jQuery.validator.format("Не более {0} символов!")
+      },  
       brif_phone: "Заполните поле",
       brif_email: {
         required: "Заполните поле",
