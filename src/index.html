@@ -11,12 +11,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Yandex.Metrika counter -->
-  <script
-    type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(53975647, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true }); </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/53975647" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript> <!-- /Yandex.Metrika counter -->
+  
 </head>
 <body>
   <nav class="navbar">
@@ -329,8 +324,8 @@
   <footer class="footer">
     <div class="footer-wrap">
       <div class="map" id="map">
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf9e7a566ec11e013d5a18042a7a0d7f86d60ec6e78ad23fa7a085d1807d7f94&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>
+        <!-- <script async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf9e7a566ec11e013d5a18042a7a0d7f86d60ec6e78ad23fa7a085d1807d7f94&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script> -->
       </div>
       <!-- /.map -->
       <div class="container">
@@ -390,6 +385,34 @@
   <!-- Подключаем скрипта для маски телефона -->
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/modal.js"></script>
+
+  <!-- Yandex.Metrika counter -->
+  <script> 
+  (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(53975647, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true }); 
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/53975647" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
+
+  <!-- Подключение яндекс карт через API -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<6a344009-5719-4c11-9c78-48e68de6e267>&lang=ru_RU"></script>
+  <script>
+    ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [55.611409, 37.201122],
+        zoom: 11,
+        scroll: false
+      });
+      myMap.geoObjects
+        .add(new ymaps.Placemark([55.611409, 37.201122], {
+          balloonContent: 'улица Ленина, 10 посёлок Толстопальцево, Москва, Россия, 143350',
+          iconCaption: 'Ремонт квартир'
+        }, {
+            preset: 'islands#greenDotIconWithCaption'
+          }))
+    }
+  </script>
 
   <script>
     new WOW().init();
