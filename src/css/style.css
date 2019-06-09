@@ -89,6 +89,7 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   font-size: 24px;
   font-family: 'Museo Sans 700 Bold', sans-serif;
   text-align: center;
+  font-weight: normal;
 }
 
 .section-subtitle {
