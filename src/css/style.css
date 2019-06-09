@@ -698,6 +698,13 @@ div.invalid {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .portfolio__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
 @media (max-width: 576px) {
   .portfolio {
     background: #f5f5f5;
@@ -843,6 +850,13 @@ div.invalid {
   }
 }
 
+@media (max-width: 768px) {
+  .price__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
 @media (max-width: 576px) {
   .price {
     padding-top: 50px;
@@ -976,6 +990,13 @@ div.invalid {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps__title {
+    font-size: 24px;
+    line-height: 1.2;
   }
 }
 
@@ -1157,13 +1178,125 @@ div.invalid {
   }
 }
 
+/* Стили для блока с договором */
+.contract {
+  padding-top: 19px;
+  padding-bottom: 208px;
+}
+
+.contract__title {
+  max-width: 650px;
+  margin-bottom: 93px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 6px;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.contract-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contract__item {
+  max-width: 290px;
+  text-align: center;
+}
+
+.contract__item-1 {
+  margin-left: -12px;
+}
+
+.contract__item-3 {
+  margin-right: -16px;
+}
+
+.contract__text {
+  margin-top: 32px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (max-width: 992px) {
+  .contract-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contract__title {
+    padding-left: 0;
+  }
+  .contract__item {
+    margin: 0;
+    margin-bottom: 44px;
+  }
+  .contract__item-3 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contract__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .contract {
+    padding-top: 9px;
+    padding-bottom: 72px;
+  }
+  .contract__title {
+    margin-bottom: 49px;
+    font-size: 18px;
+  }
+  .contract__item {
+    margin-bottom: 30px;
+  }
+  .contract__item-3 {
+    margin-bottom: 0;
+  }
+  .contract__text {
+    margin-top: 27px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .contract__text-1 {
+    max-width: 141px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contract__text-2 {
+    max-width: 225px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contract__text-3 {
+    max-width: 215px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Стили для блока бриф */
 .brif {
   background-image: url("../img/brif/brif-color-bg.jpg"), url("../img/brif/brif-bg.jpg");
   background-position: left center, center right;
   background-size: 50%, contain;
   background-repeat: repeat-y, no-repeat;
-  padding-bottom: 76px;
+  padding-bottom: 22px;
 }
 
 .brif-block {
@@ -1196,7 +1329,7 @@ div.invalid {
   width: 100%;
   max-width: 370px;
   margin-top: 14px;
-  margin-bottom: 27px;
+  margin-bottom: 15px;
   margin-left: 4px;
   font-size: 16px;
   line-height: 18px;
@@ -1218,7 +1351,7 @@ div.invalid {
 
 .interview__subtitle {
   display: block;
-  margin-bottom: 82px;
+  margin-bottom: 81px;
   margin-left: 4px;
   font-size: 16px;
   line-height: 45px;
@@ -1346,7 +1479,7 @@ div.invalid {
   .brif {
     background-image: url("../img/brif/brif-color-bg.jpg"), url("../img/brif/brif-bg.jpg");
     background-position: top center, center bottom;
-    background-size: 100% 47%, cover;
+    background-size: 100% 47.5%, cover;
     background-repeat: repeat-x, no-repeat;
   }
   .brif-block {
@@ -1383,7 +1516,7 @@ div.invalid {
 @media (max-width: 576px) {
   .brif {
     padding-top: 36px;
-    padding-bottom: 30px;
+    padding-bottom: 22px;
   }
   .brif__input {
     margin-bottom: 8px;
@@ -1420,7 +1553,7 @@ div.invalid {
     margin-left: -1px;
   }
   .interview-list__item:nth-child(2) {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
   .interview-list__item:nth-child(3) {
     -webkit-box-align: center;
@@ -1435,8 +1568,14 @@ div.invalid {
     font-size: 14px;
     width: 230px;
   }
+  .interview-list__text-2 {
+    margin-top: 7px;
+  }
+  .interview-list__text-3 {
+    max-width: 180px;
+  }
   .form__title {
-    margin-top: 3px;
+    margin-top: 2px;
     margin-left: -2px;
     margin-bottom: 23px;
     font-size: 18px;
@@ -1612,6 +1751,7 @@ div.invalid {
 
 @media (max-width: 576px) {
   .contacts {
+    padding-top: 0;
     text-align: left;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1621,7 +1761,7 @@ div.invalid {
     font-size: 18px;
     line-height: 1.2;
     margin-left: 1px;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
   .contacts-list {
     margin-left: -2px;

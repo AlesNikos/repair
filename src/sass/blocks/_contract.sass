@@ -1,0 +1,73 @@
+.contract
+  padding-top: 19px
+  padding-bottom: 208px
+  &__title
+    max-width: 650px
+    margin-bottom: 93px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 6px
+    font-size: 30px
+    line-height: 45px
+  &-block
+    display: flex
+    justify-content: space-around
+  &__item
+    max-width: 290px
+    text-align: center
+    &-1
+      margin-left: -12px
+    &-3
+      margin-right: -16px
+  &__text
+    margin-top: 32px
+    font-size: 18px
+    line-height: 24px
+
+@media (max-width: 992px)
+  .contract
+    &-block
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__title
+      padding-left: 0
+    &__item
+      margin: 0
+      margin-bottom: 44px
+      &-3
+        margin-bottom: 0
+
+@media (max-width: 768px)
+  .contract
+    &__title
+      font-size: 24px
+      line-height: 1.2
+
+@media (max-width: 576px)
+  .contract
+    padding-top: 9px
+    padding-bottom: 72px
+    &__title
+      margin-bottom: 49px
+      font-size: 18px
+    &__item
+      margin-bottom: 30px
+      &-3
+        margin-bottom: 0
+    &__text
+      margin-top: 27px
+      font-size: 14px
+      line-height: 1.2
+      &-1
+        max-width: 141px
+        margin-left: auto
+        margin-right: auto
+      &-2
+        max-width: 225px
+        margin-left: auto
+        margin-right: auto
+      &-3
+        max-width: 215px
+        margin-left: auto
+        margin-right: auto
