@@ -91,6 +91,21 @@ $(document).ready(function() {
   //   }
   // });
 
+  /* Скрипт для появления карты при проктутке до нее */
+  var target = $('.footer');
+  var targetPos = target.offset().top;
+  var winHeight = $(window).height();
+  var scrollToElem = targetPos - winHeight;
+
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    if (winScrollTop > scrollToElem) {
+      $('#map').html('<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf9e7a566ec11e013d5a18042a7a0d7f86d60ec6e78ad23fa7a085d1807d7f94&amp;width=100%25&amp;height=640&amp;lang=ru_RU&amp;scroll=false"></script>');
+      console.log('докрутили');
+      $(window).unbind('scroll');
+    }
+  });
+
   /* Валидация форм */
   $('#offer-form').validate({
     rules: {

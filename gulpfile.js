@@ -5,11 +5,9 @@ let uglify = require('gulp-uglify');
 let htmlmin = require('gulp-htmlmin');
 let tinyPNG = require('gulp-tinypng-compress');
 
-gulp.task('default', defaultTask);
 
-function defaultTask(done) {
-  done();
-}
+
+
 
 gulp.task('minify-css', function(done) {
   return gulp.src('./src/css/*.css')
@@ -51,7 +49,7 @@ gulp.task('fonts', function (done) {
   done();
 });
 
-gulp.task('tinypng', function () {
+gulp.task('tinypng', function (done) {
   return gulp.src('./src/img/**/*.{png,jpg,jpeg}')
     .pipe(tinyPNG({
       key: 's5pturJNj4eRPPUIfkIyTXQQAovgcuj6',
@@ -61,3 +59,7 @@ gulp.task('tinypng', function () {
     .pipe(gulp.dest('dist/img/'))
     done();
 });
+
+gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'move-js', 'htmlmin', 'fonts', 'tinypng', function (done) {
+  done();
+}));
