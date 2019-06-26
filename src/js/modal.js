@@ -4,6 +4,13 @@ $(document).ready(function() {
     $('.modal').addClass('modal_active');
   })
 
+  $('.card__link').on('click', function (event) {
+    event.preventDefault();
+    $('.modal').addClass('modal_active');
+    let target = $(this).attr('data-target');
+    $('.modal-content').load(target + '.html');
+  })
+
   $('#close').on('click', function(event) {
     event.preventDefault();
     $('.modal').removeClass('modal_active');
@@ -125,37 +132,72 @@ $(document).ready(function() {
       offer_phone: "Заполните поле"
     },
     errorClass: "invalid",
-    errorElement: "div"  
+    errorElement: "div",
+    /* Иницализируем отправку формы (форма не отправляется с пустыми инпутами) */
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart-offer.php",
+        data: $(form).serialize(),
+        success: function () {
+          $(form).find("input").val("");
+          // $('.modal').removeClass('modal_active');
+          // $('.modal-thanks').fadeIn();
+          $("form").trigger("reset");
+        }
+      });
+      return false;
+    }  
   });
 
-  $('#brif-form').validate({
+  const validationParams = {
     rules: {
-      brif_username: {
+      user_name: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
-      brif_phone: "required",
-      brif_email: {
+      user_phone: "required",
+      user_email: {
         required: true,
         email: true
       }
-    }, 
+    },
     messages: {
-      brif_username: {
+      user_name: {
         required: "Заполните поле",
         minlength: jQuery.validator.format("Не менее {0} символов!"),
         maxlength: jQuery.validator.format("Не более {0} символов!")
-      },  
-      brif_phone: "Заполните поле",
-      brif_email: {
+      },
+      user_phone: "Заполните поле",
+      user_email: {
         required: "Заполните поле",
         email: "Введите корректный email"
       }
     },
     errorClass: "invalid",
-    errorElement: "div"
-  });
+    errorElement: "div",
+    /* Иницализируем отправку формы (форма не отправляется с пустыми инпутами) */
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(form).serialize(),
+        success: function () {
+          $(form).find("input").val("");
+          // $('.modal').removeClass('modal_active');
+          // $('.modal-thanks').fadeIn();
+          $("form").trigger("reset");
+        }
+      });
+      return false;
+    }
+  };
+
+  $('#brif-form').validate(validationParams);
+  $('#modal-form').validate(validationParams);
+  
+  
 
   /* Маска для телефона */
   $('.phone').mask('+7 (999) 999-99-99');

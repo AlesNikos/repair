@@ -1,0 +1,50 @@
+.bath
+  &__item 
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+    &:nth-child(3)
+      margin-bottom: 50px
+  &__image
+    margin-right: 30px
+  &__description
+    max-width: 180px
+  &__title
+    margin: 0
+    margin-bottom: 10px
+    font-size: 16px
+    +bold
+  &__line
+    width: 42px
+    height: 2px
+    margin-bottom: 10px
+    background-color: $main-color
+  &__text
+    margin: 0
+    font-size: 16px
+    line-height: 22px
+    span 
+      +bold
+  &-features
+    &__title
+      margin: 0
+      margin-bottom: 25px
+      font-size: 14px
+      +bold
+  &-list
+    margin: 0
+    padding: 0
+    list-style: none
+    &__item
+      font-size: 14px
+      line-height: 25px
+      &:before
+        content: ''
+        display: inline-block
+        width: 7px
+        height: 7px
+        margin-right: 14px
+        border-radius: 4px
+        background-color: $main-color
+      
+
