@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $('#button').on('click', function(event) {
-    event.preventDefault();
-    $('.modal').addClass('modal_active');
-  })
+  // $('#button').on('click', function(event) {
+  //   event.preventDefault();
+  //   $('.modal').addClass('modal_active');
+  // })
 
   $('.card__link').on('click', function (event) {
     event.preventDefault();

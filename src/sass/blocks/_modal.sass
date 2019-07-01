@@ -15,9 +15,7 @@
     justify-content: space-between
     align-items: center
     margin: auto
-    max-width: 1170px
-    width: 90%
-    min-width: 200px
+    width: 1170px
     background-color: #ffffff
     // padding: 40px
     &__close
@@ -31,7 +29,7 @@
   &-column 
     flex-basis: 50%
   &-content
-    padding: 70px
+    padding: 79px
     background-color: $secondary
   &__form 
     max-width: 370px
@@ -50,3 +48,29 @@
       font-size: 24px
       +bold
 
+@media (max-width: 1200px)
+  .modal
+    &-dialog
+      width: 960px
+    &-content
+      padding: 60px 10px 60px 40px
+
+@media (max-width: 992px)
+  .modal
+    &-dialog
+      justify-content: center
+      width: 540px
+      padding: 40px
+    &-column
+      flex-basis: 100%
+      &-1
+        display: none
+
+@media (max-width: 576px)
+  .modal
+    &-dialog
+      width: 300px
+      padding: 15px
+    &__description
+      width: 100%
+      margin: 0

@@ -380,6 +380,11 @@ button:focus, input:focus, a:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
 .container {
   width: 1170px;
   margin: auto;
@@ -2267,6 +2272,9 @@ div.invalid {
 
 #brif-form {
   position: relative;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #user_name-error {
@@ -2312,15 +2320,6 @@ div.invalid {
   .form__subtitle {
     margin-bottom: 30px;
   }
-  #user_name-error {
-    left: 48px;
-  }
-  #user_phone-error {
-    left: 48px;
-  }
-  #user_email-error {
-    left: 48px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -2358,27 +2357,6 @@ div.invalid {
   }
   .form {
     padding-left: 0;
-  }
-  #user_name-error {
-    left: 184px;
-  }
-  #user_phone-error {
-    left: 184px;
-  }
-  #user_email-error {
-    left: 184px;
-  }
-}
-
-@media (max-width: 768px) {
-  #user_name-error {
-    left: 93px;
-  }
-  #user_phone-error {
-    left: 93px;
-  }
-  #user_email-error {
-    left: 93px;
   }
 }
 
@@ -2685,9 +2663,7 @@ div.invalid {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  max-width: 1170px;
-  width: 90%;
-  min-width: 200px;
+  width: 1170px;
   background-color: #ffffff;
 }
 
@@ -2707,7 +2683,7 @@ div.invalid {
 }
 
 .modal-content {
-  padding: 70px;
+  padding: 79px;
   background-color: #f5f5f5;
 }
 
@@ -2729,6 +2705,43 @@ div.invalid {
   font-family: 'Museo Sans 700 Bold', sans-serif;
 }
 
+@media (max-width: 1200px) {
+  .modal-dialog {
+    width: 960px;
+  }
+  .modal-content {
+    padding: 60px 10px 60px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-dialog {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 540px;
+    padding: 40px;
+  }
+  .modal-column {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .modal-column-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    width: 300px;
+    padding: 15px;
+  }
+  .modal__description {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 /* Стили для модальных окон */
 .bath__item {
   display: -webkit-box;
@@ -2737,11 +2750,11 @@ div.invalid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .bath__item:nth-child(3) {
-  margin-bottom: 50px;
+  margin-bottom: 47px;
 }
 
 .bath__image {
@@ -2778,7 +2791,7 @@ div.invalid {
 
 .bath-features__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
   font-size: 14px;
   font-family: 'Museo Sans 700 Bold', sans-serif;
 }
